@@ -574,13 +574,21 @@ img { max-width: 100%; }
 /* ═══════════════════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════════════════ */
+.footer-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: none; /* remove inversion to preserve original logo colors */
+}
+
+/* Utility class to invert logo when a white variant is not available */
+.footer-logo--invert { filter: brightness(0) invert(1); }
+
 #footer {
   background: var(--hh-navy-dark);
   color: rgba(255,255,255,.75);
   padding: 3rem 0 1.5rem;
 }
-
-.footer-logo { height: 40px; filter: brightness(0) invert(1); }
 
 .footer-brand-name {
   font-family: 'Poppins', sans-serif;
