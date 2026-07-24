@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help House — Ensemble pour les orphelins du Cameroun</title>
+  <meta name="description" content="Help House est une association camerounaise qui accompagne les orphelins. Faites un don financier via Orange Money, MTN Money ou virement bancaire, ou un don en nature." />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Style personnalisé -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════ -->
+  <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        <img id="nav-logo" src="assets/logo.png" alt="Help House Logo" />
+        <span id="nav-brand">Help House</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Menu">
+        <i class="bi bi-list" style="font-size:1.6rem;color:var(--hh-navy)"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="#mission">Notre Mission</a></li>
+          <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dons-financiers">Faire un don</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex gap-2 mt-3 mt-lg-0 align-items-center">
+          <a id="btn-instagram-mobile" href="#" target="_blank" rel="noopener noreferrer"
+             class="btn-instagram d-flex d-lg-none">
+            <i class="bi bi-instagram"></i> En savoir plus
+          </a>
+          <a id="btn-instagram" href="#" target="_blank" rel="noopener noreferrer"
+             class="btn-instagram d-none d-lg-flex">
+            <i class="bi bi-instagram"></i> En savoir plus
+          </a>
+          <a href="#dons-financiers" class="btn btn-primary-hh d-none d-lg-inline-flex align-items-center gap-2">
+            <i class="bi bi-heart-fill"></i> Faire un don
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <div class="hero-badge animate-on-scroll">
+            <span class="dot"></span>
+            Association à but non lucratif au Cameroun
+          </div>
+          <h1 id="hero-slogan" class="animate-on-scroll delay-1">
+            Votre générosité<br>
+            bâtit <span class="accent">leur avenir.</span>
+          </h1>
+          <p id="hero-description" class="animate-on-scroll delay-2"></p>
+          <div class="d-flex flex-wrap gap-3 animate-on-scroll delay-3">
+            <a href="#dons-financiers" class="btn btn-primary-hh d-inline-flex align-items-center gap-2">
+              <i class="bi bi-heart-fill"></i> Faire un don maintenant
+            </a>
+            <a id="hero-instagram" href="#" target="_blank" rel="noopener noreferrer"
+               class="btn btn-outline-white d-inline-flex align-items-center gap-2">
+              <i class="bi bi-instagram"></i> En savoir plus
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 hero-image-wrap animate-on-scroll delay-2">
+          <div class="hero-logo-card">
+            <img src="assets/fond-haut.png" alt="Help House" />
+            <p class="hero-quote">"Ensemble, nous faisons la différence."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       IMPACT (bannière chiffres clés)
+  ══════════════════════════════════════════════════ -->
+  <section id="impact">
+    <div class="container">
+      <div class="row g-0" id="impact-stats">
+        <!-- Généré par View.renderImpact() -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       NOTRE MISSION
+  ══════════════════════════════════════════════════ -->
+  <section id="mission">
+    <div class="container">
+      <div class="text-center mb-5 animate-on-scroll">
+        <span class="section-tag">Notre mission</span>
+        <h2 class="section-title">Ce que nous faisons <span>pour eux</span></h2>
+        <div class="section-divider"></div>
+        <p class="text-muted mx-auto" style="max-width:540px;font-size:.97rem;">
+          Chaque enfant mérite une chance. Notre mission est de créer les conditions d'un épanouissement
+          durable pour chaque orphelin que nous accompagnons.
+        </p>
+      </div>
+      <div class="row g-4" id="mission-cards">
+        <!-- Généré par View.renderMission() -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       DONS FINANCIERS
+  ══════════════════════════════════════════════════ -->
+  <section id="dons-financiers">
+    <div class="container">
+      <div class="text-center mb-5 animate-on-scroll">
+        <span class="section-tag">Don financier</span>
+        <h2 class="section-title">Faites un don <span>en argent</span></h2>
+        <div class="section-divider"></div>
+        <p class="text-muted mx-auto" style="max-width:520px;font-size:.97rem;">
+          Votre contribution financière, quelle que soit sa taille, est utilisée directement
+          pour subvenir aux besoins des enfants que nous accompagnons.
+        </p>
+      </div>
+      <div class="row g-4 justify-content-center" id="dons-financiers-cards">
+        <!-- Généré par View.renderDonsFinanciers() -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       DONS EN NATURE
+  ══════════════════════════════════════════════════ -->
+  <section id="dons-nature">
+    <div class="container">
+      <div class="text-center mb-5 animate-on-scroll">
+        <span class="section-tag">Don en nature</span>
+        <h2 class="section-title">Donnez des <span>biens essentiels</span></h2>
+        <div class="section-divider"></div>
+        <p id="nature-intro" class="text-muted mx-auto"></p>
+      </div>
+
+      <div class="row g-3 mb-5" id="nature-categories">
+        <!-- Généré par View.renderDonsNature() -->
+      </div>
+
+      <div class="row justify-content-center animate-on-scroll">
+        <div class="col-md-8 col-lg-6">
+          <div class="nature-cta-box">
+            <i class="bi bi-box-seam-fill fs-2 mb-3" style="color:var(--hh-teal-dark)"></i>
+            <h5 class="fw-bold mb-2" style="color:var(--hh-navy)">Vous souhaitez faire un don en nature ?</h5>
+            <p class="text-muted mb-4" style="font-size:.92rem;">
+              Contactez-nous pour organiser la remise de vos dons.
+              Nous vous indiquerons nos points de collecte et horaires de dépôt.
+            </p>
+            <a href="#contact" class="btn btn-primary-hh d-inline-flex align-items-center gap-2">
+              <i class="bi bi-chat-dots-fill"></i> Nous contacter
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="text-center mb-5 animate-on-scroll">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Écrivez-<span>nous</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+
+        <!-- Infos de contact -->
+        <div class="col-lg-4 animate-on-scroll">
+          <div class="contact-info-card">
+            <h4 class="fw-bold mb-4">Nous joindre</h4>
+
+            <div class="contact-info-item">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <div class="text-white-50 small mb-1">Email</div>
+                <a id="contact-email-link" href="#" style="color:rgba(255,255,255,.85)">
+                  <span id="contact-email-text"></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <i class="bi bi-instagram"></i>
+              <div>
+                <div class="text-white-50 small mb-1">Instagram</div>
+                <a href="https://www.instagram.com/helphouse_cm" target="_blank"
+                   rel="noopener noreferrer" style="color:rgba(255,255,255,.85)">
+                  @helphouse_cm
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <div class="text-white-50 small mb-1">Localisation</div>
+                <span>Cameroun</span>
+              </div>
+            </div>
+
+            <hr style="border-color:rgba(255,255,255,.15);margin:1.5rem 0">
+            <p style="font-size:.85rem;color:rgba(255,255,255,.5);">
+              Notre équipe vous répond dans les 48 heures ouvrées.
+            </p>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="col-lg-8 animate-on-scroll delay-1">
+          <div class="contact-form-card">
+            <form id="contact-form" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label" for="contact-nom">Nom complet</label>
+                  <input type="text" id="contact-nom" name="nom" class="form-control"
+                         placeholder="Jean Dupont" required />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="contact-email">Adresse email</label>
+                  <input type="email" id="contact-email" name="email" class="form-control"
+                         placeholder="jean@exemple.com" required />
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="contact-sujet">Sujet</label>
+                  <select id="contact-sujet" name="sujet" class="form-select">
+                    <option value="don-nature">Don en nature</option>
+                    <option value="don-financier">Don financier</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="contact-message">Message</label>
+                  <textarea id="contact-message" name="message" class="form-control"
+                            rows="5" placeholder="Votre message…" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary-hh w-100 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-send-fill"></i> Envoyer le message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <img src="assets/logo.png" alt="Help House" class="footer-logo" />
+            <span class="footer-brand-name">Help House</span>
+          </div>
+          <p class="footer-tagline">Ensemble pour les orphelins du Cameroun.</p>
+          <a href="https://www.instagram.com/helphouse_cm" target="_blank"
+             rel="noopener noreferrer" class="btn-instagram d-inline-flex mt-3">
+            <i class="bi bi-instagram"></i> Nous suivre
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <p class="footer-title">Navigation</p>
+          <a href="#mission" class="footer-link">Notre Mission</a>
+          <a href="#impact" class="footer-link">Impact</a>
+          <a href="#dons-financiers" class="footer-link">Faire un don</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <p class="footer-title">Contact</p>
+          <a href="tel:+237695614614" class="footer-link">
+            <i class="bi bi-phone-fill me-1"></i> +237 695 61 46 14
+          </a>
+          <a href="mailto:helphousecmr@gmail.com" class="footer-link">
+            <i class="bi bi-envelope-fill me-1"></i> helphousecmr@gmail.com
+          </a>
+          <span class="footer-link">
+            <i class="bi bi-geo-alt-fill me-1"></i> Obili, Yaoundé
+          </span>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <p class="footer-title">Modes de don</p>
+          <a href="#dons-financiers" class="footer-link">
+            <i class="bi bi-phone-fill me-1"></i> Orange Money
+          </a>
+          <a href="#dons-financiers" class="footer-link">
+            <i class="bi bi-phone-fill me-1"></i> MTN Mobile Money
+          </a>
+          <a href="https://paytech.cm" target="_blank" rel="noopener noreferrer" class="footer-link">
+            <i class="bi bi-bank2 me-1"></i> Virement bancaire
+          </a>
+          <a href="#dons-nature" class="footer-link">
+            <i class="bi bi-box-seam me-1"></i> Don en nature
+          </a>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 footer-bottom">
+        <span>&copy; <span id="footer-year"></span> Help House. Tous droits réservés.</span>
+        <span>Fait avec <i class="bi bi-heart-fill" style="color:var(--hh-teal)"></i> au Cameroun</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════
+       TOAST NOTIFICATION
+  ══════════════════════════════════════════════════ -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="hh-toast" class="toast align-items-center" role="alert" aria-live="assertive">
+      <div class="d-flex">
+        <div class="toast-body" id="hh-toast-body"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                data-bs-dismiss="toast" aria-label="Fermer"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════════════ -->
+  <!-- Bootstrap 5 JS Bundle (inclut Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- MVC — ordre important : Model → View → Controller → App -->
+  <script src="js/model.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Année dynamique dans le footer -->
+  <script>
+    document.getElementById("footer-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
