@@ -8,10 +8,10 @@ const Controller = {
     // Rendu initial de toutes les sections
     View.renderNavbar(Model.association);
     View.renderHero(Model.association);
-    View.renderImpact(Model.impact);
+    // View.renderImpact(Model.impact);
     View.renderMission(Model.mission);
     View.renderDonsFinanciers(Model.donsFinanciers);
-    View.renderDonsNature(Model.donsNature);
+    // View.renderDonsNature(Model.donsNature);
     View.renderContact(Model.association);
 
     // Liaison des événements

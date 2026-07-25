@@ -212,7 +212,23 @@ img { max-width: 100%; }
   opacity: .88;
   transform: translateY(-1px);
 }
-
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  background: linear-gradient(135deg, #0A66C2, #1E88E5, #42A5F5, #64B5F6, #90CAF9);
+  color: #fff !important;
+  border: none;
+  border-radius: 50px;
+  padding: .45rem 1.2rem;
+  font-weight: 700;
+  font-size: .85rem;
+  transition: opacity var(--transition), transform var(--transition);
+}
+.btn-linkedin:hover {
+  opacity: .88;
+  transform: translateY(-1px);
+}
 /* ═══════════════════════════════════════════════════════
    HERO
 ═══════════════════════════════════════════════════════ */
@@ -272,7 +288,6 @@ img { max-width: 100%; }
   font-size: 1.05rem;
   color: rgba(255,255,255,.80);
   max-width: 560px;
-  margin-bottom: 2.2rem;
   line-height: 1.75;
 }
 
@@ -329,7 +344,7 @@ img { max-width: 100%; }
 /* ═══════════════════════════════════════════════════════
    IMPACT
 ═══════════════════════════════════════════════════════ */
-#impact {
+/*#impact {
   background: var(--hh-navy);
   padding: 3.5rem 0;
 }
@@ -354,7 +369,7 @@ img { max-width: 100%; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .8px;
-}
+}*/
 
 /* ═══════════════════════════════════════════════════════
    MISSION

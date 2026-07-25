@@ -10,6 +10,8 @@ const View = {
     document.getElementById("nav-brand").textContent = data.nom;
     document.getElementById("btn-instagram").href = data.instagram;
     document.getElementById("btn-instagram-mobile").href = data.instagram;
+    document.getElementById("btn-linkedin").href = data.linkedin;
+    document.getElementById("btn-linkedin-mobile").href = data.linkedin;
   },
 
   /* ── Hero ────────────────────────────────────────────── */
@@ -17,6 +19,7 @@ const View = {
     document.getElementById("hero-slogan").textContent = data.slogan;
     document.getElementById("hero-description").textContent = data.description;
     document.getElementById("hero-instagram").href = data.instagram;
+    document.getElementById("hero-linkedin").href = data.linkedin;
   },
 
   /* ── Impact ──────────────────────────────────────────── */
@@ -52,6 +55,23 @@ const View = {
     container.innerHTML = dons.map(don => {
       if (don.lien) {
         // Carte virement bancaire
+        if (don.lien === "#contact") {
+         // Don en nature
+         return `
+           <div class="col-md-4">
+             <div class="don-card h-100 p-4 d-flex flex-column">
+               <div class="don-icone mb-3" style="color:${don.couleur}">
+                 <i class="bi ${don.icone}"></i>
+               </div>
+               <h5 class="don-operateur">${don.operateur}</h5>
+               <p class="don-instructions flex-grow-1">${don.instructions}</p>
+               <a href="${don.lien}" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary-hh mt-3 w-100">
+                 <i class="bi bi-chat-dots-fill me-2"></i>Nous contacter
+               </a>
+             </div>
+           </div>`;
+       }
         return `
           <div class="col-md-4">
             <div class="don-card h-100 p-4 d-flex flex-column">
@@ -105,6 +125,11 @@ const View = {
   renderContact(data) {
     document.getElementById("contact-email-link").href = `mailto:${data.email}`;
     document.getElementById("contact-email-text").textContent = data.email;
+    document.getElementById("contact-linkedin-link").href = data.linkedin;
+    const footerLinkedin = document.getElementById("footer-linkedin");
+    if (footerLinkedin) {
+      footerLinkedin.href = data.linkedin;
+    }
   },
 
   /* ── Feedback copie ──────────────────────────────────── */

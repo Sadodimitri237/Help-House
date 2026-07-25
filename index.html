@@ -41,7 +41,6 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto gap-1">
           <li class="nav-item"><a class="nav-link" href="#mission">Notre Mission</a></li>
-          <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
           <li class="nav-item"><a class="nav-link" href="#dons-financiers">Faire un don</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -50,9 +49,17 @@
              class="btn-instagram d-flex d-lg-none">
             <i class="bi bi-instagram"></i> En savoir plus
           </a>
+          <a id="btn-linkedin-mobile" href="#" target="_blank" rel="noopener noreferrer"
+             class="btn-linkedin d-flex d-lg-none" >
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
           <a id="btn-instagram" href="#" target="_blank" rel="noopener noreferrer"
              class="btn-instagram d-none d-lg-flex">
             <i class="bi bi-instagram"></i> En savoir plus
+          </a>
+          <a id="btn-linkedin" href="#" target="_blank" rel="noopener noreferrer"
+             class="btn-linkedin d-none d-lg-flex" >
+            <i class="bi bi-linkedin"></i> LinkedIn
           </a>
           <a href="#dons-financiers" class="btn btn-primary-hh d-none d-lg-inline-flex align-items-center gap-2">
             <i class="bi bi-heart-fill"></i> Faire un don
@@ -85,8 +92,12 @@
                class="btn btn-outline-white d-inline-flex align-items-center gap-2">
               <i class="bi bi-instagram"></i> En savoir plus
             </a>
+            <a id="hero-linkedin" href="#" target="_blank" rel="noopener noreferrer"
+               class="btn btn-outline-white d-inline-flex align-items-center gap-2">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
           </div>
-          <p id="hero-description" class="animate-on-scroll delay-2"></p>
+          <p id="hero-description" class="animate-on-scroll delay-2 mt-4"></p>
         </div>
         <div class="col-lg-5 animate-on-scroll delay-2">
             <img class="w-100 h-100" src="assets/fond-haut.png" alt="Help House" />
@@ -97,14 +108,14 @@
 
   <!-- ══════════════════════════════════════════════════
        IMPACT (bannière chiffres clés)
-  ══════════════════════════════════════════════════ 
-  <section id="impact">
+  ══════════════════════════════════════════════════ -->
+  <!-- <section id="impact">
     <div class="container">
-      <div class="row g-0" id="impact-stats"> -->
-        <!-- Généré par View.renderImpact() -->
-      <!-- </div>
+      <div class="row g-0" id="impact-stats">
+        Généré par View.renderImpact()
+      </div>
     </div>
-  </section>-->
+  </section> -->
 
   <!-- ══════════════════════════════════════════════════
        NOTRE MISSION
@@ -116,8 +127,8 @@
         <h2 class="section-title">Ce que nous faisons <span>pour eux</span></h2>
         <div class="section-divider"></div>
         <p class="text-muted mx-auto" style="max-width:540px;font-size:.97rem;">
-          Chaque enfant mérite une chance. Notre mission est de créer les conditions d'un épanouissement
-          durable pour chaque enfant en milieu defavorisé que nous accompagnons.
+          Chaque enfant mérite une chance. Notre mission est de créer les conditions d'un épanouissement durable pour chaque enfant en milieu défavorisé que nous accompagnons, en favorisant son accès à l'éducation et à la formation. Grâce à la scolarisation, à la fourniture de matériel scolaire et à un suivi éducatif régulier, nous investissons dans son avenir intellectuel et lui donnons les moyens de construire un futur meilleur.
+
         </p>
       </div>
       <div class="row g-4" id="mission-cards">
@@ -140,45 +151,13 @@
           pour subvenir aux besoins des enfants que nous accompagnons.
         </p>
       </div>
+      
       <div class="row g-4 justify-content-center" id="dons-financiers-cards">
         <!-- Généré par View.renderDonsFinanciers() -->
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════════
-       DONS EN NATURE
-  ══════════════════════════════════════════════════ -->
-  <section id="dons-nature">
-    <div class="container">
-      <div class="text-center mb-5 animate-on-scroll">
-        <span class="section-tag">Don en nature</span>
-        <h2 class="section-title">Donnez des <span>biens essentiels</span></h2>
-        <div class="section-divider"></div>
-        <p id="nature-intro" class="text-muted mx-auto"></p>
-      </div>
-
-      <div class="row g-3 mb-5" id="nature-categories">
-        <!-- Généré par View.renderDonsNature() -->
-      </div>
-
-      <div class="row justify-content-center animate-on-scroll">
-        <div class="col-md-8 col-lg-6">
-          <div class="nature-cta-box">
-            <i class="bi bi-box-seam-fill fs-2 mb-3" style="color:var(--hh-teal-dark)"></i>
-            <h5 class="fw-bold mb-2" style="color:var(--hh-navy)">Vous souhaitez faire un don en nature ?</h5>
-            <p class="text-muted mb-4" style="font-size:.92rem;">
-              Contactez-nous pour organiser la remise de vos dons.
-              Nous vous indiquerons nos points de collecte et horaires de dépôt.
-            </p>
-            <a href="#contact" class="btn btn-primary-hh d-inline-flex align-items-center gap-2">
-              <i class="bi bi-chat-dots-fill"></i> Nous contacter
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ══════════════════════════════════════════════════
        CONTACT
@@ -215,6 +194,17 @@
                 <a href="https://www.instagram.com/helphouse_cm" target="_blank"
                    rel="noopener noreferrer" style="color:rgba(255,255,255,.85)">
                   @helphouse_cm
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <i class="bi bi-linkedin"></i>
+              <div>
+                <div class="text-white-50 small mb-1">LinkedIn</div>
+                <a id="contact-linkedin-link" href="#" target="_blank"
+                   rel="noopener noreferrer" style="color:rgba(255,255,255,.85)">
+                  Help House
                 </a>
               </div>
             </div>
@@ -288,16 +278,21 @@
             <span class="footer-brand-name">Help House</span>
           </div>
           <p class="footer-tagline">Ensemble pour les orphelins du Cameroun.</p>
-          <a href="https://www.instagram.com/helphouse_cm" target="_blank"
-             rel="noopener noreferrer" class="btn-instagram d-inline-flex mt-3">
-            <i class="bi bi-instagram"></i> Nous suivre
-          </a>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://www.instagram.com/helphouse_cm" target="_blank"
+               rel="noopener noreferrer" class="btn-instagram d-inline-flex">
+              <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <a href="https://www.linkedin.com/posts/help-house237_helphouse-educationpourtous-educationdequalitaez-ugcPost-7457029969240739840-r8Mq?utm_source=share&utm_medium=member_android&rcm=ACoAADSqBJEBI1T6FlOrL4NMzr45rmvKwLYVQzY" target="_blank"
+               rel="noopener noreferrer" class="btn-linkedin d-inline-flex">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+          </div>
         </div>
 
         <div class="col-6 col-md-2">
           <p class="footer-title">Navigation</p>
           <a href="#mission" class="footer-link">Notre Mission</a>
-          <a href="#impact" class="footer-link">Impact</a>
           <a href="#dons-financiers" class="footer-link">Faire un don</a>
           <a href="#contact" class="footer-link">Contact</a>
         </div>
@@ -326,7 +321,7 @@
           <a href="https://paytech.cm" target="_blank" rel="noopener noreferrer" class="footer-link">
             <i class="bi bi-bank2 me-1"></i> Virement bancaire
           </a>
-          <a href="#dons-nature" class="footer-link">
+          <a href="#dons-financiers" class="footer-link">
             <i class="bi bi-box-seam me-1"></i> Don en nature
           </a>
         </div>
