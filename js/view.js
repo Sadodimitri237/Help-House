@@ -97,6 +97,7 @@ const View = {
             <h5 class="don-operateur">${don.operateur}</h5>
             <div class="don-numero-wrapper mb-3">
               <span class="don-numero" id="num-${don.id}">${don.numero}</span>
+              <span class="don-numero" id="num-${don.id}">${don.numero1}</span>
               <button class="btn btn-copy ms-2" data-numero="${don.numero}" data-id="${don.id}"
                 title="Copier le numéro">
                 <i class="bi bi-clipboard" id="icon-${don.id}"></i>

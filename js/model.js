@@ -50,7 +50,8 @@ const Model = {
     {
       id: "mobile",
       operateur: "Orange Money / MTN Mobile Money",
-      numero: "+237 695 61 46 14 / +237 674 31 64 34",
+      numero: "+237 695 61 46 14",
+      numero1: "+237 674 31 64 34",
       couleur: "#FF6600",
       icone: "bi-phone-fill",
       instructions:
@@ -60,6 +61,7 @@ const Model = {
       id: "banque",
       operateur: "Virement bancaire",
       numero: null,
+      numero1: null,
       couleur: "#2B4A6B",
       icone: "bi-bank2",
       lien: "https://revolut.me/genevievebrenda",
