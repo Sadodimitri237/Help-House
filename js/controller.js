@@ -69,16 +69,39 @@ const Controller = {
     });
   },
 
-  /* ── Formulaire de contact (simulation AJAX) ──────────── */
+  /* ── Formulaire de contact ───────────────────────────── */
   _bindContactForm() {
     const form = document.getElementById("contact-form");
     if (!form) return;
 
+    form.setAttribute("action", "https://formsubmit.co/helphousecmr@gmail.com");
+    form.setAttribute("method", "POST");
+    form.setAttribute("accept-charset", "utf-8");
+
+    const subjectInput = form.querySelector('input[name="_subject"]');
+    if (!subjectInput) {
+      const hiddenSubject = document.createElement("input");
+      hiddenSubject.type = "hidden";
+      hiddenSubject.name = "_subject";
+      hiddenSubject.value = "Nouveau message Help House";
+      form.appendChild(hiddenSubject);
+    }
+
+    const captchaInput = form.querySelector('input[name="_captcha"]');
+    if (!captchaInput) {
+      const hiddenCaptcha = document.createElement("input");
+      hiddenCaptcha.type = "hidden";
+      hiddenCaptcha.name = "_captcha";
+      hiddenCaptcha.value = "false";
+      form.appendChild(hiddenCaptcha);
+    }
+
     form.addEventListener("submit", e => {
       e.preventDefault();
 
-      const nom     = form.querySelector("#contact-nom").value.trim();
-      const emailVal= form.querySelector("#contact-email").value.trim();
+      const nom = form.querySelector("#contact-nom").value.trim();
+      const emailVal = form.querySelector("#contact-email").value.trim();
+      const sujet = form.querySelector("#contact-sujet").value.trim();
       const message = form.querySelector("#contact-message").value.trim();
 
       if (!nom || !emailVal || !message) {
@@ -90,51 +113,9 @@ const Controller = {
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Envoi…';
 
-      // Simulation d'un appel AJAX (XMLHttpRequest)
-      this._ajaxSend({ nom, email: emailVal, message }, () => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="bi bi-send-fill me-2"></i>Envoyer le message';
-        View.showFormSuccess();
-      }, (err) => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="bi bi-send-fill me-2"></i>Envoyer le message';
-        View.showFormError(err);
-      });
+      form.querySelector('input[name="_subject"]').value = `Nouveau message Help House - ${sujet || "Autre"}`;
+      form.submit();
     });
-  },
-
-  /* ── Simulation d'envoi AJAX ──────────────────────────── */
-  _ajaxSend(payload, onSuccess, onError) {
-    // En production, remplacer l'URL par votre endpoint réel
-    // et retirer la simulation setTimeout.
-    console.log("[AJAX] Envoi du formulaire :", payload);
-
-    // Simulation d'un délai réseau (~1 s)
-    setTimeout(() => {
-      // Simuler un succès (taux 100% en démo)
-      const ok = true;
-      if (ok) {
-        onSuccess();
-      } else {
-        onError("Erreur serveur. Veuillez réessayer plus tard.");
-      }
-    }, 1200);
-
-    /* ── Modèle réel avec XMLHttpRequest ──────────────────
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "/api/contact", true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState !== 4) return;
-      if (xhr.status >= 200 && xhr.status < 300) {
-        onSuccess();
-      } else {
-        onError("Erreur " + xhr.status + ". Veuillez réessayer.");
-      }
-    };
-    xhr.onerror = () => onError("Problème de connexion.");
-    xhr.send(JSON.stringify(payload));
-    ─────────────────────────────────────────────────────── */
   },
 
   /* ── Animations d'apparition au scroll ───────────────── */

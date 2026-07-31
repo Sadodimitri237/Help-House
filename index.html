@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Help House — Ensemble pour les orphelins du Cameroun</title>
-  <meta name="description" content="Help House est une association camerounaise qui accompagne les orphelins. Faites un don financier via Orange Money, MTN Money ou virement bancaire, ou un don en nature." />
+  <title>Help House — Ensemble pour les enfants defavorisés du Cameroun</title>
+  <meta name="description" content="Help House est une association camerounaise qui accompagne les enfants defavorisés. Faites un don financier via Orange Money, MTN Money ou virement bancaire, ou un don en nature." />
 
   <!-- Bootstrap 5 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
@@ -117,25 +117,6 @@
     </div>
   </section> -->
 
-  <!-- ══════════════════════════════════════════════════
-       NOTRE MISSION
-  ══════════════════════════════════════════════════ -->
-  <section id="mission">
-    <div class="container">
-      <div class="text-center mb-5 animate-on-scroll">
-        <span class="section-tag">Notre mission</span>
-        <h2 class="section-title">Ce que nous faisons <span>pour eux</span></h2>
-        <div class="section-divider"></div>
-        <p class="text-muted mx-auto" style="max-width:540px;font-size:.97rem;">
-          Chaque enfant mérite une chance. Notre mission est de créer les conditions d'un épanouissement durable pour chaque enfant en milieu défavorisé que nous accompagnons, en favorisant son accès à l'éducation et à la formation. Grâce à la scolarisation, à la fourniture de matériel scolaire et à un suivi éducatif régulier, nous investissons dans son avenir intellectuel et lui donnons les moyens de construire un futur meilleur.
-
-        </p>
-      </div>
-      <div class="row g-4" id="mission-cards">
-        <!-- Généré par View.renderMission() -->
-      </div>
-    </div>
-  </section>
 
   <!-- ══════════════════════════════════════════════════
        DONS FINANCIERS
@@ -228,6 +209,8 @@
         <div class="col-lg-8 animate-on-scroll delay-1">
           <div class="contact-form-card">
             <form id="contact-form" novalidate>
+              <input type="hidden" name="_subject" value="Nouveau message Help House" />
+              <input type="hidden" name="_captcha" value="false" />
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label class="form-label" for="contact-nom">Nom complet</label>
@@ -264,8 +247,28 @@
 
       </div>
     </div>
+    
   </section>
 
+  <!-- ══════════════════════════════════════════════════
+       NOTRE MISSION
+  ══════════════════════════════════════════════════ -->
+  <section id="mission">
+    <div class="container">
+      <div class="text-center mb-5 animate-on-scroll">
+        <span class="section-tag">Notre mission</span>
+        <h2 class="section-title">Ce que nous faisons <span>pour eux</span></h2>
+        <div class="section-divider"></div>
+        <p class="text-muted mx-auto" style="max-width:540px;font-size:.97rem;">
+          Chaque enfant mérite une chance. Notre mission est de créer les conditions d'un épanouissement durable pour chaque enfant en milieu défavorisé que nous accompagnons, en favorisant son accès à l'éducation et à la formation. Grâce à la scolarisation, à la fourniture de matériel scolaire et à un suivi éducatif régulier, nous investissons dans son avenir intellectuel et lui donnons les moyens de construire un futur meilleur.
+
+        </p>
+      </div>
+      <div class="row g-4" id="mission-cards">
+        <!-- Généré par View.renderMission() -->
+      </div>
+    </div>
+  </section>
   <!-- ══════════════════════════════════════════════════
        FOOTER
   ══════════════════════════════════════════════════ -->
@@ -277,7 +280,7 @@
             <img src="assets/logo.png" alt="Help House" class="footer-logo" />
             <span class="footer-brand-name">Help House</span>
           </div>
-          <p class="footer-tagline">Ensemble pour les orphelins du Cameroun.</p>
+          <p class="footer-tagline">Ensemble pour les enfants defavorisés du Cameroun.</p>
           <div class="d-flex gap-2 mt-3">
             <a href="https://www.instagram.com/helphouse_cm" target="_blank"
                rel="noopener noreferrer" class="btn-instagram d-inline-flex">
