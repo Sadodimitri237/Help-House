@@ -132,6 +132,7 @@ const View = {
   renderContact(data) {
     document.getElementById("contact-email-link").href = `mailto:${data.email}`;
     document.getElementById("contact-email-text").textContent = data.email;
+    document.getElementById("contact-instagram-link").href = data.instagram;
     document.getElementById("contact-linkedin-link").href = data.linkedin;
     const footerLinkedin = document.getElementById("footer-linkedin");
     if (footerLinkedin) {
