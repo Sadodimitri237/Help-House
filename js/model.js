@@ -50,7 +50,7 @@ const Model = {
     {
       id: "mobile",
       operateur: "Orange Money / MTN Mobile Money",
-      numero: "+237 695 61 46 14",
+      numero: "+237 6 98 89 97 14",
       numero1: "+237 674 31 64 34",
       couleur: "#FF6600",
       icone: "bi-phone-fill",
